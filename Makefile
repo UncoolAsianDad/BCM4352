@@ -148,4 +148,5 @@ clean:
 	KBUILD_NOPEDANTIC=1 make -C $(KBUILD_DIR) M=`pwd` clean
 
 install:
-	install -D -m 755 wl.ko $(MDEST_DIR)
+	sudo cp wl.ko $(MDEST_DIR)
+	sudo modprobe wl
